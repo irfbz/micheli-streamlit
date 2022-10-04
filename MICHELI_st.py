@@ -3,8 +3,13 @@ import streamlit as st
 
 st.title('MICHELI FUNCTIONAL SCALE')
 
-id = st.text_input("Your ID number", key = "id")
-name = st.text_input("Your name", key = "name")
+
+with st.form(key= 'profile_form'):
+    id = st.text_input("Your ID number", key = "id")
+    name = st.text_input("Your name", key = "name")
+
+    submit_btn = st.form_submit_button('入力')
+
 
 st.write('(A) 症状')
 symptom_options = ['痛みは無い','痛みがスポーツ活動に与える影響はわずかである','痛みはスポーツ活動に中程度の影響がある','痛みはスポーツ活動に深刻な影響がある','痛くてスポーツができない']
